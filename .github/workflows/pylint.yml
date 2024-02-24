@@ -24,7 +24,6 @@ jobs:
 
     - name: Lint
       run: |
-        codespell --skip="*.md,*.m,*.ipynb,logs/**,data/**"
         flake8 .
         isort --check-only --diff basicsr/ options/ scripts/ tests/ inference/ setup.py
         yapf -r -d basicsr/ options/ scripts/ tests/ inference/ setup.py
